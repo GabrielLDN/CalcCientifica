@@ -1,6 +1,8 @@
 
 # Documentação
 
+#### A calculadora ESTÁ NO AR! Basta [clicar aqui](https://gabrielldn.github.io/CalcCientifica/) para ver o projeto de forma fácil no seu navegador!
+
 ## Estrutura do Projeto
 
 O projeto da calculadora avançada é composto por três principais arquivos: index.html, style.css e script.js.
