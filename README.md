@@ -3,7 +3,7 @@
 
 ## Estrutura do Projeto
 
-O projeto da calculadora avançada é composto por dois principais arquivos: index.html, style.css e script.js.
+O projeto da calculadora avançada é composto por três principais arquivos: index.html, style.css e script.js.
 
 ### index.html
 
