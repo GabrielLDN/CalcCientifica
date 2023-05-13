@@ -1,0 +1,221 @@
+<!DOCTYPE html> <!-- Define o tipo de documento como HTML -->
+<html lang="pt-br"> <!-- Define o idioma do documento como português do Brasil -->
+<head> <!-- Define a seção do cabeçalho do documento -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 para garantir que caracteres especiais sejam exibidos corretamente -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define as configurações de visualização para dispositivos móveis -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- Define a versão do Internet Explorer para a qual o documento é otimizado -->
+    <title>Calculadora</title> <!-- Define o título da página como "Calculadora" -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> <!-- Importa o arquivo CSS do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> <!-- Importa o arquivo JavaScript do jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> <!-- Importa o arquivo JavaScript do Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> <!-- Importa o arquivo JavaScript do Bootstrap -->
+    <link rel="shortcut icon" href="https://github.com/vinifloriano/CalcWindows/blob/master/img/favicon.png"> <!-- Define o ícone da página -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Importa o arquivo JavaScript da biblioteca Font Awesome -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Importa o arquivo CSS personalizado para a página -->
+    <script src="js/script.js"></script> <!-- Importa o arquivo JavaScript personalizado para a página -->
+</head> <!-- Finaliza a seção do cabeçalho do documento -->
+<body> <!-- Define a seção do corpo do documento -->
+    <div class="container-fluid"> <!-- Define o container principal -->
+        <div class="row cabecalio"> <!-- Define a linha do cabeçalho -->
+            <div class="col-md-9"> <!-- Define a coluna do cabeçalho -->
+                <h3>Científica</h3> <!-- Define o título do cabeçalho -->
+            </div> <!-- Finaliza a coluna do cabeçalho -->
+            <div class="col-md-1" id="historico"> <!-- Define a coluna do histórico -->
+                <h4 id="his">Histórico</h4> <!-- Define o título do histórico -->
+            </div> <!-- Finaliza a coluna do histórico -->
+            <div class="col-md-1" id="memoria"> <!-- Define a coluna da memória -->
+                <h4 id="mem">Memória</h4> <!-- Define o título da memória -->
+            </div> <!-- Finaliza a coluna da memória -->
+            <div class="col-md-1" id="branco"> <!-- Define a coluna em branco -->
+                <h4 id="bra"></h4> <!-- Define o título em branco -->
+            </div> <!-- Finaliza a coluna em branco -->
+        </div> <!-- Finaliza a linha do cabeçalho -->
+        <div class="row"> <!-- Define a linha do corpo -->
+            <div class="col-md-9"> <!-- Define a coluna do corpo -->
+                <div class="resultado2"> <!-- Define a div do resultado -->
+                    <p id="valor2"></p> <!-- Define o parágrafo do resultado -->
+                </div> <!-- Finaliza a div do resultado -->
+                <div class="resultado"> <!-- Define a div do resultado --> 
+                    <h1 id="valor">0</h1>   <!-- Define o título do resultado -->
+                </div>  <!-- Finaliza a div do resultado -->
+                <div class="row">   <!-- Define a linha dos botões -->
+                    <div class="col-1 funct-1" id="deg2">   <!-- Define a coluna do botão -->
+                        <span>DEG</span>    <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col-1 funct-1" id="hyp">    <!-- Define a coluna do botão -->
+                        <span>HYP</span>    <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col-1 funct-1" id="fe"> <!-- Define a coluna do botão -->
+                        <span>F-E</span>    <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                </div>  <!-- Finaliza a linha dos botões -->
+                <div class="row">   <!-- Define a linha dos botões -->
+                    <div class="col-1 funct-2" id="mc"> <!-- Define a coluna do botão -->
+                        <span>MC</span> <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col-1 funct-2" id="mr"> <!-- Define a coluna do botão -->
+                        <span>MR</span> <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col-1 funct-2" id="mMais">  <!-- Define a coluna do botão -->
+                        <span>M+</span> <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col-1 funct-2" id="mMenos"> <!-- Define a coluna do botão -->
+                        <span>M-</span> <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col-1 funct-2" id="ms"> <!-- Define a coluna do botão -->
+                        <span>MS</span> <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                </div>  <!-- Finaliza a linha dos botões -->
+                <div class="row linha-funcao-1">    <!-- Define a linha dos botões -->
+                    <div class="col" id="xquad">    <!-- Define a coluna do botão -->
+                        <span>x<sup>2<sup></span>   <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="elevado">  <!-- Define a coluna do botão -->
+                        <span>x<sup>y<sup></span>   <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="sen">  <!-- Define a coluna do botão -->
+                        <span>sin</span>    <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="cos">  <!-- Define a coluna do botão -->
+                        <span>cos</span>    <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="tan">  <!-- Define a coluna do botão -->
+                        <span>tan</span>    <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="ce">   <!-- Define a coluna do botão -->
+                        <span>CE</span> <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="c">    <!-- Define a coluna do botão -->
+                        <span>C</span>  <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="backspace">    <!-- Define a coluna do botão -->
+                        <span>⇽</span>  <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col opp" id="dividido"> <!-- Define a coluna do botão -->
+                        <span>÷</span>  <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                </div>  <!-- Finaliza a linha dos botões -->
+                <div class="row linha-funcao-2">    <!-- Define a linha dos botões -->
+                    <div class="col" id="xcubo">    <!-- Define a coluna do botão -->
+                        <span>x<sup>3<sup></span>   <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="yroot">    <!-- Define a coluna do botão -->
+                        <span><sup>y<sup>&radic;x</span>    <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="sen1"> <!-- Define a coluna do botão -->
+                        <span>sin<sup>-1</sup></span>   <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="cos1"> <!-- Define a coluna do botão -->
+                        <span>cos<sup>-1</sup></span>   <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="tan1"> <!-- Define a coluna do botão -->
+                        <span>tan<sup>-1</sup></span>   <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col numeros" id="7">    <!-- Define a coluna do botão -->
+                        <span>7</span>  <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col numeros" id="8">    <!-- Define a coluna do botão -->
+                        <span>8</span>  <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col numeros" id="9">    <!-- Define a coluna do botão -->
+                        <span>9</span>  <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col opp" id="multiplicar">  <!-- Define a coluna do botão -->
+                        <span>×</span>  <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                </div>  <!-- Finaliza a linha dos botões -->
+                <div class="row linha-funcao-3">    <!-- Define a linha dos botões -->
+                    <div class="col" id="raiz"> <!-- Define a coluna do botão -->
+                        <span>&radic;</span>    <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="dezax">    <!-- Define a coluna do botão -->
+                        <span>10<sup>x<sup></span>  <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="log">  <!-- Define a coluna do botão -->
+                        <span>log</span>    <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="exp">  <!-- Define a coluna do botão -->
+                        <span>Exp</span>    <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col opp" id="mod">  <!-- Define a coluna do botão -->
+                        <span>Mod</span>    <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col numeros" id="4">    <!-- Define a coluna do botão -->
+                        <span>4</span>  <!-- Define o texto do botão-->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col numeros" id="5">    <!-- Define a coluna do botão -->
+                        <span>5</span>  <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col numeros" id="6">    <!-- Define a coluna do botão -->
+                        <span>6</span>  <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col opp" id="subtrair">  <!-- Define a coluna do botão -->
+                        <span>-</span>  <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                </div>  <!-- Finaliza a linha dos botões -->
+                <div class="row linha-funcao-4">    <!-- Define a linha dos botões -->
+                    <div class="col" id="umsobre">  <!-- Define a coluna do botão -->
+                        <span><sup>1<sup>/x</span>  <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="eax">  <!-- Define a coluna do botão -->
+                        <span>e<sup>x<sup></span>   <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="ln">   <!-- Define a coluna do botão -->
+                        <span>ln</span> <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="dms">  <!-- Define a coluna do botão -->
+                        <span>dms</span>    <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="deg">  <!-- Define a coluna do botão -->
+                        <span>deg</span>    <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col numeros" id="1">    <!-- Define a coluna do botão -->
+                        <span>1</span>  <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col numeros" id="2">    <!-- Define a coluna do botão -->
+                        <span>2</span>  <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col numeros" id="3">    <!-- Define a coluna do botão -->   
+                        <span>3</span>  <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col opp" id="somar">    <!-- Define a coluna do botão -->
+                        <span>+</span>  <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                </div>  <!-- Finaliza a linha dos botões -->
+                <div class="row linha-funcao-5">    <!-- Define a linha dos botões -->
+                    <div class="col" id="arrow-up"> <!-- Define a coluna do botão -->
+                        <span><i class="fas fa-arrow-up"></i></span>    <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="pi">   <!-- Define a coluna do botão -->
+                        <span>&pi;</span>   <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="fatorial">   <!-- Define a coluna do botão -->
+                        <span>n!</span> <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="maismenos">    <!-- Define a coluna do botão -->
+                        <span>±</span>      <!-- Define o texto do botão -->
+                    </div>      <!-- Finaliza a coluna do botão -->
+                    <div class="col opp" id="abreparenteses">       <!-- Define a coluna do botão -->
+                        <span>(</span>      <!-- Define o texto do botão -->
+                    </div>      <!-- Finaliza a coluna do botão -->
+                    <div class="col opp" id="fechaparenteses">      <!-- Define a coluna do botão -->
+                        <span>)</span>      <!-- Define o texto do botão -->
+                    </div>      <!-- Finaliza a coluna do botão -->
+                    <div class="col numeros" id="0">        <!-- Define a coluna do botão -->
+                        <span>0</span>      <!-- Define o texto do botão -->
+                    </div>      <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="virgula">  <!-- Define a coluna do botão -->
+                        <span>,</span>   <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                    <div class="col" id="igual">    <!-- Define a coluna do botão -->
+                        <span>=</span>  <!-- Define o texto do botão -->
+                    </div>  <!-- Finaliza a coluna do botão -->
+                </div>  <!-- Finaliza a linha dos botões -->
+            </div>  <!-- Finaliza a coluna dos botões -->
+            <div class="col-md-3 tab">  <!-- Define a coluna do histórico -->
+                <div id="div-historico">Ainda não há histórico</div>    <!-- Define o histórico -->
+            </div>  <!-- Finaliza a coluna do histórico -->
+        </div>  <!-- Finaliza a linha dos botões e do histórico -->
+    </div>  <!-- Finaliza o container dos botões e do histórico -->
+</body> 
+</html>
