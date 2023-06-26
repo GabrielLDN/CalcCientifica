@@ -1,5 +1,5 @@
 
-# Documentação
+# Documentação (EM ATUALIZAÇÃO)
 
 #### A calculadora ESTÁ NO AR! Basta [clicar aqui](https://gabrielldn.github.io/CalcCientifica/) para ver o projeto de forma fácil no seu navegador!
 
